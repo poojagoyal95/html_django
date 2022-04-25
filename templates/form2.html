@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+  	<head>
+    	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Code Experts</title>
+
+	    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'assets/img/favicons/apple-touch-icon.png' %}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{% static 'assets/img/favicons/favicon-32x32.png' %}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{% static 'assets/img/favicons/favicon-16x16.png' %}">
+		<link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicons/favicon.ico' %}">
+		<link rel="manifest" href="{% static 'assets/img/favicons/manifest.json' %}">
+		<meta name="msapplication-TileImage" content="{% static 'assets/img/favicons/mstile-150x150.png' %}">
+		<meta name="theme-color" content="#ffffff">
+
+
+	    <!-- ===============================================-->
+	    <!--    Stylesheets-->
+	    <!-- ===============================================-->
+	    <script src="{% static 'js/config.navbar-vertical.js' %}" type="text/javascript"></script>		
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+		<link href="{% static 'assets/lib/perfect-scrollbar/perfect-scrollbar.css' %}" rel="stylesheet">
+		<link href="{% static 'css/theme.css' %}" rel="stylesheet">
+ 	</head>
+
+
+  	<body class="bg-white">
+
+	    <!-- ===============================================-->
+	    <!--    Main Content-->
+	    <!-- ===============================================-->
+	    <main class="main" id="top">
+
+
+	      	<div class="container-fluid">
+	        	<div class="row min-vh-100 bg-100">
+	          		<div class="col-6 d-none d-lg-block">
+
+	            		<div class="bg-holder" style="background-image:url({% static 'assets/img/generic/14.jpg' %});background-position: 50% 20%;">
+	            		</div>
+	          		</div>
+	          		<div class="col-sm-10 col-md-6 px-sm-0 align-self-center mx-auto py-5">
+	            		<div class="row justify-content-center no-gutters">
+	              			<div class="col-lg-9 col-xl-8 col-xxl-6">
+	                			<div class="card">
+	                  				<div class="card-body p-4">
+	                    				<form method="post" >
+	                    					{% csrf_token %}
+	                      					
+	                      					<div class="form-group form-check">
+												<label class="form-check-label">Do you have a coding language preference?</label>
+                      							<div class="custom-control custom-radio custom-control-inline">
+  													<input class="custom-control-input" type="radio" name="lang_preference" value="1" id="lang_preference_1"/>
+  													<label class="custom-control-label" for="lang_preference_1">Yes</label>
+												</div>
+												<div class="custom-control custom-radio custom-control-inline">
+  													<input class="custom-control-input" type="radio" name="lang_preference" value="0" id="lang_preference_2" checked />
+  													<label class="custom-control-label" for="lang_preference_2">No</label>
+												</div>
+                    						</div>
+
+                    						<div class="form-group form-check">
+												<label class="form-check-label">Do you have a map of your software build-up?</label>
+                      							<div class="custom-control custom-radio custom-control-inline">
+  													<input class="custom-control-input" type="radio" name="map_preference" value="1"id="map_preference_1">
+  													<label class="custom-control-label" for="map_preference_1">Yes</label>
+												</div>
+												<div class="custom-control custom-radio custom-control-inline">
+  													<input class="custom-control-input" type="radio" name="map_preference" value="0" checked id="map_preference_2" checked>
+  													<label class="custom-control-label" for="map_preference_2">No</label>
+												</div>
+                    						</div>
+
+                    						<div class="form-group form-check">
+												<label class="form-check-label">If no, would you like to have it created by Code Experts?</label>
+                      							<div class="custom-control custom-radio custom-control-inline">
+  													<input class="custom-control-input" type="radio" name="created_preference"value="1" id="created_preference_1">
+  													<label class="custom-control-label" for="created_preference_1">Yes</label>
+												</div>
+												<div class="custom-control custom-radio custom-control-inline">
+  													<input class="custom-control-input" type="radio" name="created_preference" value="0" checked id="created_preference_2">
+  													<label class="custom-control-label" for="created_preference_2">No</label>
+												</div>
+                    						</div>
+
+                    						<div class="form-group mb-0">
+	                          					<label>If no: Please select the date for sharing you final map</label>
+                      							<input class="form-control" name="map_date"  placeholder="15/2024" type="date" required />
+	                      					</div>
+
+	                      					<div class="form-group form-check">
+												<label class="form-check-label">Do you have your software design elements?</label>
+                      							<div class="custom-control custom-radio custom-control-inline">
+  													<input class="custom-control-input" type="radio" name="design_preference" value="1" id="design_preference_1">
+  													<label class="custom-control-label" for="design_preference_1">Yes</label>
+												</div>
+												<div class="custom-control custom-radio custom-control-inline">
+  													<input class="custom-control-input" type="radio" name="design_preference" value="0" checked id="design_preference_2">
+  													<label class="custom-control-label" for="design_preference_2">No</label>
+												</div>
+                    						</div>
+
+                    						<div class="form-group form-check">
+												<label class="form-check-label">If no, wouldyou like to have it created by code experts?</label>
+                      							<div class="custom-control custom-radio custom-control-inline">
+  													<input class="custom-control-input" type="radio" name="code_expert" value="1" id="code_expert_1">
+  													<label class="custom-control-label" for="code_expert_1">Yes</label>
+												</div>
+												<div class="custom-control custom-radio custom-control-inline">
+  													<input class="custom-control-input" type="radio" name="code_expert" value="0" checked id="code_expert_2">
+  													<label class="custom-control-label" for="code_expert_2">No</label>
+												</div>
+                    						</div>
+                    						<input type="hidden" name="product_val" value="True">
+                    						<div class="form-group mb-0">
+	                          					<label>If no: Please select the date for sharing you final design pattern</label>
+                      							<input class="form-control" name="final_date"  placeholder="15/2024" type="date" required />
+	                      					</div>
+
+	                      					<div class="form-group">
+	                        					<button class="btn btn-primary btn-block mt-3" type="submit" name="submit">Submit</button>
+	                      					</div>
+	                    				</form>
+	                  				</div>
+	                			</div>
+	              			</div>
+	            		</div>
+	          		</div>
+	        	</div>
+	      	</div>
+		</main>
+	  
+	    <!-- ===============================================-->
+	    <!--    JavaScripts-->
+	    <!-- ===============================================-->
+	    <script src="{% static 'js/jquery.min.js' %}"></script>
+	    <script src="{% static 'js/popper.min.js' %}"></script>
+	    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'assets/lib/@fortawesome/all.min.js' %}"></script>
+		<script src="{% static 'assets/lib/stickyfilljs/stickyfill.min.js' %}"></script>
+		<script src="{% static 'assets/lib/sticky-kit/sticky-kit.min.js' %}"></script>
+		<script src="{% static 'assets/lib/is_js/is.min.js' %}"></script>
+		<script src="{% static 'assets/lib/lodash/lodash.min.js' %}"></script>
+		<script src="{% static 'assets/lib/perfect-scrollbar/perfect-scrollbar.js' %}"></script>
+	    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:100,200,300,400,500,600,700,800,900&amp;display=swap" rel="stylesheet">
+	    <script src="{% static 'js/theme.js' %}"></script>
+
+  	</body>
+
+</html>
